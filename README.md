@@ -17,9 +17,8 @@ Note that this library doesn't allow you to save changes to your models back to 
 
 ## Table of content
 
-- [Quick overview](#quick-overview)
-- [Install](#install)
 - [Usage](#usage)
+- [Install](#install)
 - [Author](#author)
 
 ## Usage
@@ -43,31 +42,6 @@ const client = contentful.createClient({
 ```html
 <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 ```
-
-## Usage
-
-```sh
-npm run start
-```
-Runs the app in development mode.<br>
-104
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-105
-​
-106
-The page will automatically reload if you make changes to the code.<br>
-107
-You will see the build errors and lint warnings in the console.
-108
-​
-109
-<p align='center'>
-110
-<img src='https://cdn.jsdelivr.net/gh/marionebl/create-react-app@9f6282671c54f0874afd37a72f6689727b562498/screencast-error.svg' width='600' alt='Build errors'>
-111
-</p>
-112
-​
 
 ## Author
 
