@@ -1,21 +1,19 @@
-<h1 align="center">Welcome to Frenon 👋</h1>
+<h1 align="center">Welcome to ComfyHouse 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> Booking hotel project for job interview. Technology used: React.js, CSS, HTML, Bootstrap, Mock API
+> This is a thin wrapper around the [Contentful Delivery SDK](https://github.com/contentful/contentful.rb) and [Contentful Management SDK](https://github.com/contentful/contentful-management.rb) api client libraries.
 
-### 🏠 [Homepage](frenon.vercel.app)
+It allows you to inherit from `ContentfulModel::Base` and specify the content type id, and optionally, fields to coerce in a specific way.
 
-# Create React App 
+Note that this library doesn't allow you to save changes to your models back to Contentful. We need to use the Contentful Management API for that. Pull requests welcome!
 
-Create React apps with no build configuration.
+### 🏠 [Homepage](https://github.com/yanachernova/ComfyHouse)
 
-- [User Guide](https://facebook.github.io/create-react-app/) – How to develop apps bootstrapped with Create React App.
+# What is Contentful? 
 
-Create React App works on macOS, Windows, and Linux.<br>
-If something doesn’t work, please [file an issue](https://github.com/facebook/create-react-app/issues/new).<br>
-If you have questions or need help, please ask in [GitHub Discussions](https://github.com/facebook/create-react-app/discussions).
+[Contentful](https://www.contentful.com) provides a content infrastructure for digital teams to power content in websites, apps, and devices. Unlike a CMS, Contentful was built to integrate with the modern software stack. It offers a central hub for structured content, powerful management and delivery APIs, and a customizable web app that enable developers and content creators to ship digital products faster.
 
 ## Table of content
 
@@ -24,12 +22,15 @@ If you have questions or need help, please ask in [GitHub Discussions](https://g
 - [Usage](#usage)
 - [Author](#author)
 
-## Quick Overview
+## Usage
 
-```sh
-npm create-react-app nameofyourapp
-cd my-app
-npm run start
+```ruby
+const client = contentful.createClient({
+    // This is the space ID. A space is like a project folder in Contentful terms
+    space: "zu3kam7hu59d",
+    // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+    accessToken: "TzRsyatWq3IEFj1avIqSc5BU-M7lKYVEDwqim2JR_ic"
+});
 ```
 
 If you've previously installed `create-react-app` globally via `npm install -g create-react-app`, we recommend you uninstall the package using `npm uninstall -g create-react-app` or `yarn global remove create-react-app` to ensure that npx always uses the latest version.
